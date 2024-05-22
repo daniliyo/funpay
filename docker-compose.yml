@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: "php.dockerfile"
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      UID: ${UID:-1000}
+      GID: ${GID:-1000}
+    volumes:
+      - ./src:/var/www
