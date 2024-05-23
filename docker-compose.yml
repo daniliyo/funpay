@@ -11,3 +11,10 @@ services:
       GID: ${GID:-1000}
     volumes:
       - ./src:/var/www
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3316:3306"
+    env_file:
+      - env/mysql.env

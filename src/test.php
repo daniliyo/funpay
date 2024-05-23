@@ -13,6 +13,7 @@ spl_autoload_register(function ($class) {
 });
 
 $mysqli = @new mysqli('localhost', 'root', 'password', 'database', 3306);
+//$mysqli = @new mysqli('mysql', 'admin', '12345', 'test', 3306);
 if ($mysqli->connect_errno) {
     throw new Exception($mysqli->connect_error);
 }
